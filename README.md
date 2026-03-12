@@ -1,4 +1,4 @@
-# Appunti Reti di Calcolatori
+﻿# Appunti Reti di Calcolatori
 
 **Disclaimer:** Gli appunti sono presi a lezione e potrebbero contenere errori o imprecisioni. Non sostituiscono il materiale didattico ufficiale.
 ### Stato del progetto
