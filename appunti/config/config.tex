@@ -1,0 +1,84 @@
+% --- CONFIGURAZIONE OTTIMIZZATA PER APPUNTI DI INGEGNERIA DEL SOFTWARE ---
+
+% 1. Lingua e Codifica
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+% 2. Layout e Geometria (Sostituisce tutti i calcoli manuali)
+\usepackage[a4paper]{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headheight=15pt}
+\usepackage{parskip} % Gestisce lo spazio tra i paragrafi senza indentazione
+
+% 3. Grafica e Colori
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{unict_blue}{RGB}{0,39,75}
+
+% 4. Codice (Essenziale per Informatica)
+\usepackage{listings}
+\lstset{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=SQL % Default per il tuo corso
+}
+
+% 5. Matematica e Simboli
+\usepackage{amsmath, amssymb, amsthm, bm}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % Risolve il warning che vedevi
+
+% 6. Intestazioni e Pié di pagina (Fancyhdr pulito)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Pulisce tutto
+\fancyhead[L]{\nouppercase{\leftmark}} % Capitolo a sinistra
+\fancyhead[R]{\thepage} % Numero pagina a destra
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+% 7. Ambienti per Definizioni (Belli da vedere)
+\usepackage[most]{tcolorbox}
+\newtcbtheorem[number within=chapter]{definition}{Definizione}{
+    enhanced, % <--- FONDAMENTALE PER RENDERIZZARE IL TITOLO ESTERNO
+    colback=unict_blue!5,
+    colframe=unict_blue,
+    coltitle=white, % <--- TESTO BIANCO PER LEGGIBILITA'
+    fonttitle=\bfseries,
+    separator sign={:},
+    boxrule=0.5pt,
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={colback=unict_blue}
+}{def}
+
+% 8. Altri pacchetti utili
+\usepackage{enumitem}
+\usepackage{hyperref} % Link cliccabili nell'indice
+\hypersetup{
+    colorlinks=true,
+    linkcolor=unict_blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Appunti Ingegneria del Software},
+}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{float}
